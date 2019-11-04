@@ -43,3 +43,4 @@ At the end of this whiteboard design session, your ability to design a moderniza
 - [MCW](https://microsoftcloudworkshop.com)
 - [Reference architecture for Managed Web Applications](https://docs.microsoft.com/en-gb/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)
 - [Azure application architecture guide](https://docs.microsoft.com/en-us/azure/architecture/guide/)
+- [Microsoft Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/) for Azure
