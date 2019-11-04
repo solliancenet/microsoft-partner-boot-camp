@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-October 2019
+November 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -200,15 +200,15 @@ To overcome these challenges, the founders launched a project to build an applic
 
 PolicyConnect was built using a traditional n-tier application architecture. The data access layer houses methods for interacting with the underlying SQL Server 2008 R2 database. A business logic layer handles things like user login and policy rules. The presentation layer provides the user interface (UI). The design follows a service-oriented architecture, with a series of Windows Communication Foundation (WCF) services representing the services and capabilities required for each tier. The application stores associated policy documents as PDF files on a file server accessible via an SMB network share on their local area network. PolicyConnect accesses these files using a canonical path (customer last name and policy number). A SQL Server 2008 R2 database houses the policy metadata for each policy document, which is currently entered manually into PolicyConnect by Contoso staff members. Contoso provided the following diagram about its current topology:
 
-![The Contoso topology diagram has a local area network comprised of the on-premises user, Application servers for authentication and authorization, policy management and data access service, database servers, and file servers. A VPN server connects them to the Remote User via PolicyConnect.](media/image2.png "The Contoso topology diagram has a local area network comprised of the on-premise user, Application servers for authentication and authorization, policy management and data access service, database servers, and file servers. A VPN server connects them to the Remote User via PolicyConnect.")
+![The Contoso topology diagram has a local area network comprised of the on-premises user, Application servers for authentication and authorization, policy management and data access service, database servers, and file servers. A VPN server connects them to the Remote User via PolicyConnect.](media/current-topology.png "The Contoso topology diagram has a local area network comprised of the on-premise user, Application servers for authentication and authorization, policy management and data access service, database servers, and file servers. A VPN server connects them to the Remote User via PolicyConnect.")
 
 The application currently supports access via a virtual private network (VPN) connection for users outside the Contoso local area network. As such, Contoso brokers are unable to view data or documents unless granted VPN access. This requirement has proven to be time-consuming and frustrating for brokers.
 
 Contoso employees rely on email as a workflow engine relative to the document management tasks. One group is responsible for scanning and cataloging while another group is responsible for assigning the policies to the specified broker. Manually written emails are sent to brokers when their customer's policies have been scanned and indexed. They are using Office 365. The company executives have frequent challenges in gauging productivity and throughput, given the manual workflow. They feel that they are blocked in quickly getting to the insights they need because each new question seems to need more custom development.
 
-Contoso recently started investigating ways to leverage the cloud to modernize its policyholder system and begin addressing several issues with the existing PolicyConnect system. However, they lack any tangible experience with the cloud and are looking for guidance on how they can best modernize and take advantage of cloud technologies.
+At the direction of the company's founders, Contoso's IT staff recently started investigating ways to leverage the cloud to modernize its policyholder system and begin addressing several issues with the existing PolicyConnect system. However, they lack any tangible experience with the cloud and are looking for guidance on how they can best modernize and take advantage of cloud technologies. Additionally, they are looking for guidance on how to plan for and execute a successful cloud migration.
 
-Contoso stated that their highest priority is addressing the end-of-support for SQL Server 2008 R2. They would like to migrate their SQL Server 2008 R2 database to a fully-managed SQL database in Azure. Once the database is in the cloud, they want to take advantage of some of the primary benefits that enabled by using a platform-as-a-service (PaaS) database service. According to Contoso, it does not use any of the "fancy" SQL Server features and hopes the migration can be a slam dunk. They would also like to understand better the performance and security features they might be able to leverage once their database is running in Azure.
+Contoso stated that their highest priority is addressing the end-of-support for SQL Server 2008 R2. They would like to migrate their SQL Server 2008 R2 database to a fully-managed SQL database in Azure. Once the database is in the cloud, they want to take advantage of some of the primary benefits that enabled by using a platform-as-a-service (PaaS) database service. According to Contoso, it does not use any of the "fancy" SQL Server features and hopes the migration can be a slam dunk. They would also like to understand better the strategies they can use to lower costs by running their data platform in the cloud. They are especially interested in learning more about the performance and security features they might be able to leverage once their database is running in Azure.
 
 Another top priority is making the system available to employees and brokers via web and mobile applications and eliminating the requirement for establishing a VPN connection. They also want to store policies in cloud storage for retrieval via these web and mobile applications. Both the web and mobile applications should permit policyholders to log in, review their information, and retrieve a PDF copy of their policy. An application programming interface (API), shared by both application, provides access to data and policy documents. The goal is to deploy the web application, database, and API to the cloud. Also, they want to learn more about lightweight, serverless architectures that may help them implement some API functionality more rapidly. They mentioned a possible use case of providing access to policy documents in storage.
 
@@ -234,11 +234,11 @@ With this new system, Contoso would like to improve its security practices. In t
 
 4. They want to improve the management of application secrets.
 
-5. They would like to make policy documents full-text searchable, with a minimal amount of implementation effort.
+5. They would like to make policy documents full-text searchable, with a minimal amount of implementation effort, and are also interested in ways they can enrich their search index with metadata extracted from policy documents.
 
 6. They are interested in leveraging serverless technologies to speed up API development. They have requested a proof-of-concept (POC) that can be used to retrieve policy documents from storage.
 
-7. They want to migrate their SQL Server 2008 R2 database to a fully-managed SQL database in Azure. Once in Azure, they would like to take advantage of some of the primary benefits enabled by using a PaaS database service.
+7. They want to migrate their SQL Server 2008 R2 database to a fully-managed SQL database in Azure and take advantage of a running on a modern data platform. Once in Azure, they want to employ a more effective data management strategy and are looking for guidance on best practices. They want to make use of the primary benefits enabled by using a PaaS database service, such as strengthening their security posture, reducing costs, and understanding better the types of data they are storing.
 
 8. Contoso wants to understand how to deploy better caching in its solution, both to lessen the load on the database and for providing scalable scoreboards.
 
@@ -255,6 +255,8 @@ With this new system, Contoso would like to improve its security practices. In t
 5. Moving everything to APIs sounds terrific, but how can we stay on top of our API inventory and manage discoverability, security, lifecycle, and monitoring into the future? Is there something we could use to develop a proof of concept quickly?
 
 6. We have been using .NET Framework for years, and now in Visual Studio web have options for .NET Framework, .NET Standard, and .NET Core. As we look at creating our new web and API applications, how do we choose the correct framework?
+
+7. Multiple factors are driving our adoption of the cloud, including a desire to reduce costs and infrastructure management, as well as modernizing our applications. We recognize that running our applications in the cloud will be a significant change from how we currently operate. Does Microsoft offer any tools or guidance that could help us prepare for, plan, and execute our cloud migration initiative more successfully?
 
 ### Infographic for common scenarios
 
@@ -304,13 +306,15 @@ Directions: With all participants at your table, respond to the following questi
 
 2. What patterns and services would you use to reduce load on the database? Implement the scoreboards? Be specific on the Azure services used and how the application would take advantage of them.
 
-3. Given their requirements, how would you enable full-text search on the stored policy documents?
+3. What guidance can be provided to Contoso around strategies for leveraging security best practices for a modern data platform?
 
 *Search*
 
-1. How can Azure Search be used to extract more information from Contoso's policy documents?
+1. Given their requirements, how would you enable full-text search on the stored policy documents?
 
-2. Can Contoso's developers extend the capabilities of Azure Search to include in-house developed cognitive skills to enrich their search index?
+2. How can Azure Cognitive Search be used to extract more information from Contoso's policy documents?
+
+3. Can Contoso's developers extend the capabilities of Azure Cognitive Search to include in-house developed cognitive skills to enrich their search index?
 
 *Extensibility*
 
@@ -427,7 +431,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 Charlene Mathis, General Manager, Contoso, Ltd.
 
-The primary audience is the business and technology decision makers. From the case study scenario, it would include the Director of Analytics. Usually we talk to the infrastructure managers who report to the chief information officer (CIO), or to application sponsors, such as a line of business (LOB) vice president (VP), chief marketing officer (CMO), or to those who represent the business unit IT or developers who report to application sponsors.
+The primary audience is the business and technology decision makers. Usually we talk to the infrastructure managers who report to the chief information officer (CIO), or to application sponsors, such as a line of business (LOB) vice president (VP), chief marketing officer (CMO), or to those who represent the business unit IT or developers who report to application sponsors.
 
 ## Preferred solution
 
@@ -529,6 +533,36 @@ After lawyers affirmed that Contoso, Ltd. could legally store customer data in t
 
     Contoso could use Azure Redis Cache and the cache-aside pattern to help mitigate load coming from large numbers of connections performing repetitive querying. In this approach, as data items are requested, the Azure Redis Cache is first checked to see if it exists there; if it is, then the cached copy is returned. Failing that, the application makes a request directly against SQL Database, but while returning the result to the client it also adds the data item into the Redis Cache. Scoreboards can be implemented effectively using Azure Redis Cache because of its support for fast atomic incrementing of the values for any given string key (for example, the key would be the username, the value the count). To reduce memory requirements for very large counts (such as possible collecting transaction counts per user in perpetuity), Contoso could use Redis' HyperLogLog to store the counted value for each user key. The HyperLogLog approximates the cardinality of a set that approximates the count of the number of unique items added (with an error rate less than 1 percent) and uses a fixed size of 12 KB (not including the bytes used to store the key).
 
+3. What guidance can be provided to Contoso around strategies for leveraging security best practices for a modern data platform?
+
+    Azure SQL Database provides numerous features and tools for helping organizations to implement best practices, reduce costs, strengthen overall security, and improve data governance.
+
+    *Cost reduction*
+
+    Azure SQL Database offers multiple pricing tiers designed to provide organizations the ability to choose the model which best fits their needs. For organizations looking to reduce costs and latency, the vCore-based purchasing model provides flexibility, control and transparency of individual resource consumption. This model allows organizations to scale compute, memory, and storage separately, based upon the workload, and provides a straightforward way to translate on-premises workload requirements to the cloud.
+
+    The SQL Database serverless compute pricing tier offers another option that optimizes price-performance and simplifies performance management for single databases with intermittent, unpredictable usage by auto-scaling compute and billing for compute used per second.
+
+    *Security*
+
+    Azure SQL Database includes numerous security tools that could be leveraged by Contoso to improve their security posture.
+
+    - [SQL Database Advance Data Security](https://docs.microsoft.com/azure/sql-database/sql-database-advanced-data-security) (ADS) provides advanced SQL security capabilities, including functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate threats to databases.
+
+    - The [SQL Vulnerability Assessment service](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) provides visibility into the security state of a database and includes actionable steps to resolve security issues and enhance database security.
+
+    - [Advanced Threat Detection](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-threat-detection-overview) for Azure SQL Database Managed Instance detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases.
+
+    - [Transparent Data Encryption](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql) encrypts data at rest. This will help protect them from the potential of malicious parties being able to obtain data from physical media, such as drives or backup tapes.
+
+    - [Dynamic Data Masking](https://docs.microsoft.com/azure/sql-database/sql-database-dynamic-data-masking-get-started) (DDM) limits sensitive data exposure by masking it to non-privileged users. This feature helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It is a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed.
+
+    - [Row-level security](https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security) enables you to control access to rows in a database table based on the characteristics of the user executing a query (such as by group membership or execution context). Row-level security (RLS) simplifies the design and coding of security in your application. RLS enables you to implement restrictions on data row access. For example, ensuring that workers can access only the data rows that are pertinent to their department or restricting data access to only the relevant data.
+
+    *Discovering and classifying data*
+
+    - The [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) feature of ADS is a new tool for discovering, classifying, labeling & reporting the sensitive data in databases. It introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data in databases, not just the database.
+
 *Search*
 
 1. Given the Contoso requirements, how would you enable full-text search on the stored policy documents?
@@ -623,6 +657,24 @@ After lawyers affirmed that Contoso, Ltd. could legally store customer data in t
     .NET Standard solves the code sharing problem for .NET developers across all .NET managed frameworks by providing a specification for implementing the base class library (BCL).
 
     ![Graphic showing the relationship between .NET Framework, .NET Core, Xamarin, and .NET Standard.](media/dot-net-framework.png ".NET Frameworks")
+
+7. Multiple factors are driving our adoption of the cloud, including a desire to reduce costs and infrastructure management, as well as modernizing our applications. We recognize that running our applications in the cloud will be a significant change from how we currently operate. Does Microsoft offer any tools or guidance that could help us prepare for, plan, and execute our cloud migration initiative more successfully?
+
+    As Contoso rightfully stated, the cloud fundamentally changes how enterprises procure and use technology resources. Running in the cloud means enterprises can provision and consume resources only when they are needed. Although the cloud offers tremendous flexibility in design choices, enterprises need a proven and consistent methodology for adopting cloud technologies. The [Microsoft Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/) for Azure meets that need, helping guide decisions throughout cloud adoption.
+
+    The Cloud Adoption Framework for Azure represents the _One Microsoft_ approach to cloud adoption in Azure. The framework consolidates and shares best practices from Microsoft employees, partners, and customers. It provides customers a set of tools, guidance, and narratives that help shape technology, business, and personnel strategies for driving desired business outcomes during cloud adoption efforts. This guidance aligns to the following phases of the cloud adoption lifecycle:
+
+    - **Strategy**: Define business justification and expected outcomes.
+    - **Plan**: Align actionable adoption plans to business outcomes.
+    - **Ready**: Prepare the cloud environment for the planned changes.
+    - **Migrate**: Migrate and modernize existing workloads.
+    - **Innovate**: Develop new cloud-native or hybrid solutions.
+    - **Govern**: Govern the environment and workloads.
+    - **Manage**: Operations management for cloud and hybrid solutions.
+
+    ![Diagram of the Microsoft Cloud Adoption Framework for Azure](media/cloud-adoption-framework-for-azure.png "Microsoft Cloud Adoption Framework for Azure")
+
+    It is important to note, however, that cloud adoption is only a means to an end. Successful cloud adoption starts well before a cloud platform vendor is selected. It begins when business and IT decision makers realize that the cloud can accelerate a specific business transformation objective. The Cloud Adoption Framework can help them align strategies for business, culture, and technical change to achieve their desired business outcomes.
 
 ## Customer quote (to be read back to the attendees at the end)
 
