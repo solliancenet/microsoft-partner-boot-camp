@@ -244,6 +244,8 @@ Below is a simple diagram Woodgrove Bank provided of their current process (blue
 
 4.  We are concerned about how much it costs to use Cosmos DB for our solution. What is the real value of the service, and how do we set up Cosmos DB in an optimal way?
 
+5.  How do we optimize our indexes for both write-heavy and read-heavy workloads?
+
 ### Infographic for common scenarios
 
 ![Infographic for common scenarios](media/common-scenarios.png 'Common scenarios diagram')
@@ -714,6 +716,14 @@ _Dashboards and reporting_
     Cosmos DB also offers flexible time-to-live (TTL) that can be set at the container-level or on individual documents. This value tells Cosmos DB to expire, or delete, a document after a certain amount of seconds. This value can be set to as little as one second, or months into the future. As a result, you can save storage costs for records that are no longer needed. The flexibility of setting TTL at the container or record-level is a unique characteristic of Cosmos DB.
 
     Another pitfall that developers or database administrators experience, especially those who are used to using traditional relational databases, is that they tend to want to create a Cosmos DB container for each "table", or entity type they wish to store. Instead, you should consider storing any number of entity types within the same container. The reason for this is that there is a cost associated with each container that you add. Because containers do not enforce any type of schema, you are able to store entities of the same type with different schemas (likely due to changes over time or from excluding properties with no values), or entirely different entities within that container. A common approach to dealing with different types of entities within a container is to add a string property like `collectionType` so that you can filter query results by that type. For instance, Woodgrove Bank stores transaction and suspicious activity data within the same container. They could assign a value of "Transaction" to the transaction entities, and "SuspiciousActivity" to the suspicious activity entities. Both types and many others can coexist within the container and can easily be filtered by the `collectionType` property.
+
+5.  How do we optimize our indexes for both write-heavy and read-heavy workloads?
+
+    Woodgrove Bank should create two or more Cosmos DB containers for their scenario, based on different indexing requirements and access patterns. Let us call the container in which streaming data is ingested, `telemetry`. This container will likely have a higher throughput than the other containers, and its index should also be optimized for write-heavy workloads. To do this, Woodgrove should not use the default index for the 'telemetry' container, but only include paths that they know will be queried further down the processing pipeline. The other containers, which tend to have a more read-heavy workload, can benefit from the default indexing policy.
+    
+    The default indexing policy for newly created containers indexes every property of every item, enforcing range indexes for any string or number, and spatial indexes for any GeoJSON object of type Point. This allows you to get high query performance without having to think about indexing and index management upfront. Since we need faster writes for `telemetry`, we exclude unused paths. The use of indexing paths can offer improved write performance and lower index storage for scenarios in which the query patterns are known beforehand, as indexing costs are directly correlated to the number of unique paths indexed.
+
+    The indexing mode for all the Cosmos DB containers should be set to **Consistent**. This means the index is updated synchronously as items are added, updated, or deleted, enforcing the consistency level configured for the account for read queries. The other indexing mode one could choose is None, which disables indexing on the container. Usually this mode is used when your container acts as a pure key-value store, and you do not need indexes for any of the other properties. It is possible to dynamically change the consistency mode prior to executing bulk operations, then changing the mode back to Consistent afterwards, if the potential performance increase warrants the temporary change.
 
 ## Customer quote (to be read back to the attendees at the end)
 

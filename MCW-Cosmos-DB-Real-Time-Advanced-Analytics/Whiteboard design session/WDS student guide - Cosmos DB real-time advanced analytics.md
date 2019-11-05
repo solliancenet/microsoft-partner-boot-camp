@@ -118,6 +118,8 @@ Below is a simple diagram Woodgrove Bank provided of their current process (blue
 
 4.  We are concerned about how much it costs to use Cosmos DB for our solution. What is the real value of the service, and how do we set up Cosmos DB in an optimal way?
 
+5.  How do we optimize our indexes for both write-heavy and read-heavy workloads?
+
 ### Infographic for common scenarios
 
 ![Infographic for common scenarios](media/common-scenarios.png 'Common scenarios diagram')
