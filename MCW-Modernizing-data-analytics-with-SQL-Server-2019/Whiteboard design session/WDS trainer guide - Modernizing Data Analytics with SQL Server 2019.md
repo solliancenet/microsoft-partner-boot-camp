@@ -449,7 +449,7 @@ _Big data and insights_
 
    One of the key new features of SQL Server 2019 is data virtualization. What this means is that you can virtualize external data in a SQL Server instance, regardless of source, location, and format, so that it can be queried like any other table, or sets of tables, within your SQL Server instance. In essence, data virtualization helps you create a single "virtual" layer of data from these disparate sources, providing unified data services to support multiple applications and users. A more familiar term we could use is data lake, or perhaps data hub. Unlike a typical data lake, however, you do not have to move data out from where it lives, yet you can still query that data through a consistent interface. This is a huge advantage over traditional ETL (extract-transform-load) processes where data must be moved from its original source to a new destination, oftentimes with some data transformation or mapping. This causes delays, extra storage, additional security, and a fair amount of engineering in most cases. With data virtualization, no data movement is required, which means the data sets are up-to-date, and it is possible to query and join these different data sources through these new capabilities, thanks to the use of new [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver15) connectors. The data sources you can connect to include Cosmos DB, SQL Server (including Azure SQL Database), Oracle, HDFS (for flat files), and DB2.
 
-   ![ETL vs. Data Virtualization](../Hands-on%20lab/media/data-virtualization-vs-etl.png)
+   ![ETL vs. Data Virtualization](media/data-virtualization-vs-etl.png)
 
    The image to the left represents traditional data movement using ETL. Compare that to data virtualization, which does not require data movement and provides a unified layer over top of existing data sources.
 
@@ -557,17 +557,48 @@ _Monitor and Troubleshoot_
 
    On the other hand, monitoring and managing SQL Server 2019 itself is very much the [same process as you would normally perform for any SQL Server system](https://docs.microsoft.com/en-us/sql/relational-databases/database-lifecycle-management?view=sql-server-ver15). You have the same type of services, surface points, security areas, and other control factors as in a stand-alone installation of SQL server. The tools you have available for managing the Master Instance in the SQL Server BDC are the same as managing a stand-alone installation, including SQL Server Management Studio, command-line interfaces, Azure Data Studio, and third party tools.
 
-   For the cluster components, you have three primary interfaces to use: The cluster administration portal, kubectl (Kubernetes tool), and the Kubernetes dashboard.
+   For the cluster components, you have six primary interfaces to use: The cluster dashboard in Azure Data Studio, monitoring notebooks, the Grafana dashboard, Kibana logs, `kubectl` (Kubernetes tool), and the Kubernetes dashboard.
 
-   The cluster administration portal can be used to monitor and troubleshoot your SQL Server 2019 Big Data cluster.
+   To view the cluster dashboard in Azure Data Studio (ADS), you must ensure you have installed the latest version of ADS. After connecting to your BDC instance, select the **SQL Server Big Data Cluster** tab on the home blade, then select **Cluster Dashboard**.
 
-   The cluster administration portal allows you to:
+   ![The Cluster Dashboard link is highlighted.](media/ads-cluster-dashboard-link.png 'Cluster Dashboard')
 
-   - Quickly view number of pods running and any issues
-   - Monitor deployment status
-   - View available service endpoints
-   - View controller and SQL Server master instance
-   - Drill down information on pods, including accessing Grafana dashboards and Kibana logs
+   The cluster dashboard provides the cluster state overview, showing the health status of each service. It also displays the service endpoints, such as your SQL Server Master Instance, proxies, and health monitoring dashboards.
+
+   ![The Cluster Dashboard is displayed.](media/ads-cluster-dashboard.png 'Cluster Dashboard')
+
+   You can select each service to view the number of pods running and any issues, as well as links to view metrics and logs.
+
+   ![The SQL Server service is displayed in cluster details.](media/ads-cluster-details.png 'Cluster Details')
+
+   To access the Grafana and Kibana dashboards, find the links in the list of service endpoints on the cluster dashboard.
+
+   ![The Grafana and Kibana dashboard links are found in the list of service endpoints.](media/ads-cluster-dashboard-graphana-kibana-links.png 'Grafana and Kibana')
+
+   Grafana dashboard:
+
+   ![The Grafana dashboard is displayed.](media/grafana-dashboard.png 'Grafana dashboard')
+
+   Kibana dashboard:
+
+   ![The Kibana dashboard is displayed.](media/kibana-dashboard.png 'Kibana dashboard')
+
+   To view and run the monitoring and troubleshooting notebooks, select **SQL Server 2019 Guide** under the Notebooks section of the cluster dashboard.
+
+   ![The SQL Server 2019 Guide is highlighted within the Notebooks section.](media/ads-cluster-dashboard-notebooks.png 'Cluster Dashboard')
+
+   Currently, the SQL Server 2019 Guide contains the following categories of executable notebooks:
+
+   1. **Troubleshooters** - notebooks hyper-linked from the `Big Data Cluster Dashboard` in `Azure Data Studio`.
+   2. **Log Analyzers** - notebooks linked from the troubleshooters, that get and analyze logs for known issues.
+   3. **Diagnose** - notebooks for diagnosing situations with a Big Data Cluster.
+   4. **Repair** - notebooks to perform repair actions for known issues in a Big Data Cluster.
+   5. **Monitor Big Data Cluster** - notebooks for monitoring the Big Data Cluster using the `azdata` command line tool.
+   6. **Monitor Kubernetes** - notebooks for monitoring a the Kubernetes cluster hosting a Big Data Cluster.
+   7. **Logs** - notebooks for display log files from a Big Data Cluster.
+   8. **Sample** - notebooks demonstrating Big Data Cluster features and functionality.
+   9. **Install** - notebooks to install prerequisites for other notebooks.
+   10. **Common** - notebooks commonly linked from other notebooks, such as `azdata` login / logout.
 
 ## Checklist of preferred objection handling
 
