@@ -27,30 +27,30 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Trainer information](#Trainer-information)
-  - [Role of the trainer](#Role-of-the-trainer)
-  - [Whiteboard design session flow](#Whiteboard-design-session-flow)
-  - [Before the whiteboard design session: How to prepare](#Before-the-whiteboard-design-session-How-to-prepare)
-  - [During the whiteboard design session: Tips for an effective whiteboard design session](#During-the-whiteboard-design-session-Tips-for-an-effective-whiteboard-design-session)
-- [MLOps whiteboard design session student guide](#MLOps-whiteboard-design-session-student-guide)
-  - [Abstract and learning objectives](#Abstract-and-learning-objectives)
-  - [Step 1: Review the customer case study](#Step-1-Review-the-customer-case-study)
-    - [Customer situation](#Customer-situation)
-    - [Customer needs](#Customer-needs)
-    - [Customer objections](#Customer-objections)
-    - [Infographic for common scenarios](#Infographic-for-common-scenarios)
-  - [Step 2: Design a proof of concept solution](#Step-2-Design-a-proof-of-concept-solution)
-  - [Step 3: Present the solution](#Step-3-Present-the-solution)
-  - [Wrap-up](#Wrap-up)
-- [MLOps whiteboard design session trainer guide](#MLOps-whiteboard-design-session-trainer-guide)
-  - [Step 1: Review the customer case study](#Step-1-Review-the-customer-case-study-1)
-  - [Step 2: Design a proof of concept solution](#Step-2-Design-a-proof-of-concept-solution-1)
-  - [Step 3: Present the solution](#Step-3-Present-the-solution-1)
-  - [Wrap-up](#Wrap-up-1)
-  - [Preferred target audience](#Preferred-target-audience)
-  - [Preferred solution](#Preferred-solution)
-  - [Checklist of preferred objection handling](#Checklist-of-preferred-objection-handling)
-  - [Customer quote (to be read back to the attendees at the end)](#Customer-quote-to-be-read-back-to-the-attendees-at-the-end)
+- [Trainer information](#trainer-information)
+  - [Role of the trainer](#role-of-the-trainer)
+  - [Whiteboard design session flow](#whiteboard-design-session-flow)
+  - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
+  - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
+- [MLOps whiteboard design session student guide](#mlops-whiteboard-design-session-student-guide)
+  - [Abstract and learning objectives](#abstract-and-learning-objectives)
+  - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+    - [Customer situation](#customer-situation)
+    - [Customer needs](#customer-needs)
+    - [Customer objections](#customer-objections)
+    - [Infographic for common scenarios](#infographic-for-common-scenarios)
+  - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+  - [Step 3: Present the solution](#step-3-present-the-solution)
+  - [Wrap-up](#wrap-up)
+- [MLOps whiteboard design session trainer guide](#mlops-whiteboard-design-session-trainer-guide)
+  - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
+  - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
+  - [Step 3: Present the solution](#step-3-present-the-solution-1)
+  - [Wrap-up](#wrap-up-1)
+  - [Preferred target audience](#preferred-target-audience)
+  - [Preferred solution](#preferred-solution)
+  - [Checklist of preferred objection handling](#checklist-of-preferred-objection-handling)
+  - [Customer quote (to be read back to the attendees at the end)](#customer-quote-to-be-read-back-to-the-attendees-at-the-end)
 
 <!-- /TOC -->
 
@@ -211,11 +211,19 @@ Finally, Trey would like to ensure that the process they establish is not litter
 
 ### Customer objections 
 
-1.  We are not clear about the benefits that using ONNX might bring to our current scenario and future scenario.
+1.  We are not clear about the benefits that using ONNX might bring to our current scenario and future scenario. Also, we are confused about the various choices that seem to be available like Python vs. ML.NET, or Keras/Tensorflow vs. PyTorch. We are concerned about making the wrong technological choices.
 
-2.  It seems like data scientists deploy their models as web services from their own python scripts, where as our developers are accustomed to using Azure DevOps to deploy their web services. Can we really have one tool that provides us build and deployment pipelines irrespective of whether we are deploying a model or web application code?
+2.  It seems like data scientists deploy their models as web services from their own python scripts, where as our developers are accustomed to using Azure DevOps to deploy their web services. Can we really have one tool that provides us build and deployment pipelines irrespective of whether we are deploying a model or web application code? Also, can we use the same tool to have a unified approach for real-time and batch scoring scenarios?
 
-3.  Obviously, we can't just have new models automatically deployed into production. What kind of safeguards can we put in place?
+3.  Obviously, we can't just have new models automatically deployed into production. What kind of safeguards can we put in place? What kind of support does Azure Machine Learning service have for enterprise security?
+
+4. In the future, we envision providing some of the trained models in devices that are embedded into the manufacturer's assembly lines. Will we need a completely different solution and process for that?
+
+5. The business processes of our customers are subject to extensive scrutiny from auditors and regulators. Can we really have traceability through the entire process, including explaining the results produced? On the same note, will be aligned with the principles of responsible AI?
+
+6. We have heard Azure Machine Learning service supports automated machine learning; can we use automated machine learning to create models using deep learning? Can we incorporate automated ML in an end-to-end DevOps pipeline? 
+
+7. Some of our team has worked with Azure Databricks (trained a few models in Spark MLlib), and they are confused by the overlap with Azure Machine Learning service. How should we be thinking about when to use which?
 
 
 
@@ -340,6 +348,12 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 |Machine Learning Pipelines|https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-your-first-pipeline?view=azure-devops|
 |Azure Pipelines - Train and deploy machine learning models|https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-machine-learning?context=azure%2Fmachine-learning%2Fservice%2Fcontext%2Fml-context&view=azure-devops|
 |Azure DevOps Release Approvals and Gates| https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/index?view=azure-devops |
+| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
+|PyTorch|https://pytorch.org|
+|Keras|https://keras.io/|
+|ML .NET|https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet|
+|Azure Machine Learning - deploy trained models to IoT Edge | https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning|
+| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|
 
 # MLOps whiteboard design session trainer guide
 
@@ -507,17 +521,53 @@ Additionally, they would need to update the web service deployment configuration
 
 ## Checklist of preferred objection handling
 
-1.  We are not clear about the benefits that using ONNX might bring to our current scenario and future scenario.
+1.  We are not clear about the benefits that using ONNX might bring to our current scenario and future scenario. Also, we are confused about the various choices that seem to be available like Python vs. ML.NET, or Keras/Tensorflow vs. PyTorch. We are concerned about making the wrong technological choices.
 
-ONNX provides two potential benefits to Trey's scenario. First, ONNX provides a common model format that can be run within a wide range of environments, without needing the libraries that were used to create the model. For example, if a model is created with Keras, they would need neither Keras nor TensorFlow to use the model for scoring. They would only need the ONNX Runtime. This enables the ONNX model to be used in web services, in .NET applications, on IoT devices and on mobile devices without additional effort. Second, because ONNX effectively re-compiles a model when converting to the ONNX format, it may provide some optimizations that improve the scoring performance. In some tests, improvements of 2x on average in the time taken to inference were experienced. 
+    ONNX provides two potential benefits to Trey's scenario. First, ONNX provides a common model format that can be run within a wide range of environments, without needing the libraries that were used to create the model. For example, if a model is created with Keras, they would need neither Keras nor TensorFlow to use the model for scoring. They would only need the ONNX Runtime. This enables the ONNX model to be used in web services, in .NET applications, on IoT devices and on mobile devices without additional effort. Second, because ONNX effectively re-compiles a model when converting to the ONNX format, it may provide some optimizations that improve the scoring performance. In some tests, improvements of 2x on average in the time taken to inference were experienced. 
 
-2.  It seems like data scientists deploy their models as web services from their own python scripts, where as our developers are accustomed to using Azure DevOps to deploy their web services. Can we really have one tool that provides us build and deployment pipelines irrespective of whether we are deploying a model or web application code?
+    Keras vs. Pytorch is the subject of much discussion in the community, however the guidance for selecting between Keras and PyTorch boils down to: Keras may be easier to start with and easier to build production grade models, while PyTorch has a steeper initial learning, as it is lower level than Keras, but it offers greater flexibility, faster inferencing and improved debugability in the balance. For a comprehensive comparison, see https://deepsense.ai/keras-or-pytorch/.
 
-Yes. Both of these scenarios are supported by Azure DevOps and Azure Pipelines. 
+    Finally, the discussion Python vs. ML.NET (C# actually) boils down to the language preferences of developers. Also, see the above-mentioned advantages of ONNX which can effectively bridge the worlds of Python and C#.
 
-3.  Obviously, we can't just have new models automatically deployed into production. What kind of safeguards can we put in place?
+2.  It seems like data scientists deploy their models as web services from their own python scripts, where as our developers are accustomed to using Azure DevOps to deploy their web services. Can we really have one tool that provides us build and deployment pipelines irrespective of whether we are deploying a model or web application code? Also, can we use the same tool to have a unified approach for real-time and batch scoring scenarios?
 
-You can create release pipelines that include pre-approvals that require a person to approve a release before it is deployed into production.
+    Yes. Both of these scenarios are supported by Azure DevOps and Azure Pipelines. Furthermore, you can use the same combination to automate deployment and operations for both types of scoring scenarios (real-time and batch).
+
+3.  Obviously, we can't just have new models automatically deployed into production. What kind of safeguards can we put in place? What kind of support does Azure Machine Learning service have for enterprise security?
+
+    You can create release pipelines that include pre-approvals that require a person to approve a release before it is deployed into production.
+
+    Azure Machine Learning service has a solid set of features supporting enterprise security including authentication for web service deployment, identity management and authorization, network security (including the use of virtual networks), data encryption, and monitoring. Standard, Azure AD-enabled, user and role management provides support for fine-grained control to Azure Machine Learning service resources. For a detailed overview of enterprise security features, see https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security.
+
+4. In the future, we envision providing some of the trained models in devices that are embedded into the manufacturer's assembly lines. Will we need a completely different solution and process for that?
+
+    No. The integration between Azure Machine Learning and IoT Edge devices provides a solid foundation for such scenarios. Read more at https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning.
+
+5. The business processes of our customers are subject to extensive scrutiny from auditors and regulators. Can we really have traceability through the entire process, including explaining the results produced? On the same note, will be aligned with the principles of responsible AI?
+
+    Azure DevOps and Azure Machine Learning service are providing excellent out of the box capabilities to support process traceability.
+    The AML Python SDK has support for model explainability (both global and local).
+
+    The context and the models developed by Trey Research are fully aligned with the core principles of responsible AI:
+    - Fairness
+    - Inclusiveness
+    - Reliability and safety
+    - Transparency
+    - Privacy and security
+    - Accountability
+
+    The details about Microsoft's approach to AI are available at https://www.microsoft.com/en-us/ai/our-approach-to-ai.
+
+6. We have heard Azure Machine Learning service supports automated machine learning. Can we incorporate automated ML in an end-to-end DevOps pipeline? 
+
+    Automated machine learning in Azure Machine Learning service helps to simplify and expedite the process of producing a performant model. It does this by trying many combinations of best practice data preparation (automated pre-processing and featurization), algorithm selection and algorithm parameters (hyper-parameter tuning) while asking the user only for some relatively simple configuration information (such as the type of prediction problem, the input training data set, the feature to predict and the compute resources on which to experiment) to perform the job. Be aware though that automated ML currently only supports classic machine learning algorithms and not deep learning approaches.
+
+    Through the Python SDK, the automated ML capabilities can be fully integrated into DevOps pipelines.
+
+7. Some of our team has worked with Azure Databricks (trained a few models in Spark MLlib), and they are confused by the overlap with Azure Machine Learning service. How should we be thinking about when to use which?
+
+    Consider using both. The best way to think about the relationship between Azure Databricks and Azure Machine Learning service is that Azure Databricks provides the tools for data engineers and data scientists to author their data and machine learning pipelines as well as the compute that powers these, and Azure Machine Learning service provides the platform that formalizes the modeling process by capturing data about training runs, versioning pipelines and models and assisting with the deployment of models as web services.
+
 
 
 ## Customer quote (to be read back to the attendees at the end)

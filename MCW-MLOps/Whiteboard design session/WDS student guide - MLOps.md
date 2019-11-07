@@ -27,16 +27,16 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [MLOps whiteboard design session student guide](#MLOps-whiteboard-design-session-student-guide)
-  - [Abstract and learning objectives](#Abstract-and-learning-objectives)
-  - [Step 1: Review the customer case study](#Step-1-Review-the-customer-case-study)
-    - [Customer situation](#Customer-situation)
-    - [Customer needs](#Customer-needs)
-    - [Customer objections](#Customer-objections)
-    - [Infographic for common scenarios](#Infographic-for-common-scenarios)
-  - [Step 2: Design a proof of concept solution](#Step-2-Design-a-proof-of-concept-solution)
-  - [Step 3: Present the solution](#Step-3-Present-the-solution)
-  - [Wrap-up](#Wrap-up)
+- [MLOps whiteboard design session student guide](#mlops-whiteboard-design-session-student-guide)
+  - [Abstract and learning objectives](#abstract-and-learning-objectives)
+  - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+    - [Customer situation](#customer-situation)
+    - [Customer needs](#customer-needs)
+    - [Customer objections](#customer-objections)
+    - [Infographic for common scenarios](#infographic-for-common-scenarios)
+  - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+  - [Step 3: Present the solution](#step-3-present-the-solution)
+  - [Wrap-up](#wrap-up)
 
 <!-- /TOC -->
 
@@ -85,11 +85,19 @@ Finally, Trey would like to ensure that the process they establish is not litter
 
 ### Customer objections 
 
-1.  We are not clear about the benefits that using ONNX might bring to our current scenario and future scenario.
+1.  We are not clear about the benefits that using ONNX might bring to our current scenario and future scenario. Also, we are confused about the various choices that seem to be available like Python vs. ML.NET, or Keras/Tensorflow vs. PyTorch. We are concerned about making the wrong technological choices.
 
-2.  It seems like data scientists deploy their models as web services from their own python scripts, where as our developers are accustomed to using Azure DevOps to deploy their web services. Can we really have one tool that provides us build and deployment pipelines irrespective of whether we are deploying a model or web application code?
+2.  It seems like data scientists deploy their models as web services from their own python scripts, where as our developers are accustomed to using Azure DevOps to deploy their web services. Can we really have one tool that provides us build and deployment pipelines irrespective of whether we are deploying a model or web application code? Also, can we use the same tool to have a unified approach for real-time and batch scoring scenarios?
 
-3.  Obviously, we can't just have new models automatically deployed into production. What kind of safeguards can we put in place?
+3.  Obviously, we can't just have new models automatically deployed into production. What kind of safeguards can we put in place? What kind of support does Azure Machine Learning service have for enterprise security?
+
+4. In the future, we envision providing some of the trained models in devices that are embedded into the manufacturer's assembly lines. Will we need a completely different solution and process for that?
+
+5. The business processes of our customers are subject to extensive scrutiny from auditors and regulators. Can we really have traceability through the entire process, including explaining the results produced? On the same note, will be aligned with the principles of responsible AI?
+
+6. We have heard Azure Machine Learning service supports automated machine learning; can we use automated machine learning to create models using deep learning? Can we incorporate automated ML in an end-to-end DevOps pipeline? 
+
+7. Some of our team has worked with Azure Databricks (trained a few models in Spark MLlib), and they are confused by the overlap with Azure Machine Learning service. How should we be thinking about when to use which?
 
 
 
@@ -214,3 +222,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 |Machine Learning Pipelines|https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-your-first-pipeline?view=azure-devops|
 |Azure Pipelines - Train and deploy machine learning models|https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-machine-learning?context=azure%2Fmachine-learning%2Fservice%2Fcontext%2Fml-context&view=azure-devops|
 |Azure DevOps Release Approvals and Gates| https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/index?view=azure-devops |
+| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
+|PyTorch|https://pytorch.org|
+|Keras|https://keras.io/|
+|ML .NET|https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet|
+|Azure Machine Learning - deploy trained models to IoT Edge | https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning|
+| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|
