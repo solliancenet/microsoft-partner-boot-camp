@@ -130,6 +130,9 @@ Finally, they would like to be able to easily create dashboards that summarize t
 
 4.  Some of our team has worked with Azure Databricks, and they are confused by the overlap with Azure Machine Learning service. How should we be thinking about when to use which? 
 
+5. We are concerned about the capabilities around securing the solution. We are thinking mostly about security (including networking) and identity. How is Azure Machine Learning supporting enterprise security?
+   
+6. Are we fully aligned with the principles of responsible AI?
 
 
 ### Infographic for common scenarios
@@ -279,3 +282,5 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 |Microsoft Learn - Data Scientist|https://docs.microsoft.com/en-us/learn/browse/?roles=data-scientist|
 |PyTorch|https://pytorch.org|
 |Keras|https://keras.io/|
+| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
+| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|

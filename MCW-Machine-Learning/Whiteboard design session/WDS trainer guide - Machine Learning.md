@@ -255,6 +255,10 @@ Finally, they would like to be able to easily create dashboards that summarize t
 
 4.  Some of our team has worked with Azure Databricks, and they are confused by the overlap with Azure Machine Learning service. How should we be thinking about when to use which? 
 
+5. We are concerned about the capabilities around securing the solution. We are thinking mostly about security (including networking) and identity. How is Azure Machine Learning supporting enterprise security?
+   
+6. Are we fully aligned with the principles of responsible AI?
+
 ### Infographic for common scenarios
 
 **Azure Machine Learning service taxonomy**
@@ -402,6 +406,8 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 |Microsoft Learn - Data Scientist|https://docs.microsoft.com/en-us/learn/browse/?roles=data-scientist|
 |PyTorch|https://pytorch.org|
 |Keras|https://keras.io/|
+| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
+| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|
 
 # Machine Learning whiteboard design session trainer guide
 
@@ -594,6 +600,22 @@ _Enabling visualization_
 4.  Some of our team has worked with Azure Databricks, and they are confused by the overlap with Azure Machine Learning service. How should we be thinking about when to use which? 
 
     Consider using both. The best way to think about the relationship between Azure Databricks and Azure Machine Learning service is that Azure Databricks provides the tools for data engineers and data scientists to author their data and machine learning pipelines as well as the compute that powers these, and Azure Machine Learning service provides the platform that formalizes the modeling process by capturing data about training runs, versioning pipelines and models and assisting with the deployment of models as web services.
+
+5. We are concerned about the capabilities around securing the solution. We are thinking mostly about security (including networking) and identity. How is Azure Machine Learning supporting enterprise security?
+
+    Azure Machine Learning service has a solid set of features supporting enterprise security including authentication for web service deployment, identity management and authorization, network security (including the use of virtual networks), data encryption, and monitoring. Standard, Azure AD-enabled, user and role management provides support for fine-grained control to Azure Machine Learning service resources. For a detailed overview of enterprise security features, see https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security.
+   
+6. Are we fully aligned with the principles of responsible AI?
+
+    The context and the models developed by Trey Research are fully aligned with the core principles of responsible AI:
+    - Fairness
+    - Inclusiveness
+    - Reliability and safety
+    - Transparency
+    - Privacy and security
+    - Accountability
+
+    The details about Microsoft's approach to AI are available at https://www.microsoft.com/en-us/ai/our-approach-to-ai.
  
 ## Customer quote (to be read back to the attendees at the end)
 
