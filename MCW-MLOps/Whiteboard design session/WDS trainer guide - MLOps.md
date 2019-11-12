@@ -9,9 +9,8 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-June 2019
+November 2019
 </div>
-
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -339,21 +338,21 @@ Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-|Azure Machine Learning documentation|https://docs.microsoft.com/en-us/azure/machine-learning/service/|
-|Azure Machine Learning - How to enable App Insights| https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-app-insights |
-|Azure Machine Learning - How to enable data collection |https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-data-collection|
-|Machine Learning Pipelines|https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-your-first-pipeline?view=azure-devops|
-|Azure Pipelines - Train and deploy machine learning models|https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-machine-learning?context=azure%2Fmachine-learning%2Fservice%2Fcontext%2Fml-context&view=azure-devops|
-|Azure DevOps Release Approvals and Gates| https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/index?view=azure-devops |
-| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
-|PyTorch|https://pytorch.org|
-|Keras|https://keras.io/|
-|ML .NET|https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet|
-|Azure Machine Learning - deploy trained models to IoT Edge | https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning|
-| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|
+|                                                            |                                                                                                                                                                            |
+| ---------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Description**                                            |                                                                                 **Links**                                                                                  |
+| Azure Machine Learning documentation                       |                                                      https://docs.microsoft.com/en-us/azure/machine-learning/service/                                                      |
+| Azure Machine Learning - How to enable App Insights        |                                         https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-app-insights                                         |
+| Azure Machine Learning - How to enable data collection     |                                       https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-data-collection                                        |
+| Machine Learning Pipelines                                 |                            https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-your-first-pipeline?view=azure-devops                             |
+| Azure Pipelines - Train and deploy machine learning models | https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-machine-learning?context=azure%2Fmachine-learning%2Fservice%2Fcontext%2Fml-context&view=azure-devops |
+| Azure DevOps Release Approvals and Gates                   |                                     https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/index?view=azure-devops                                      |
+| Enterprise security for Azure Machine Learning service     |                                        https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security                                         |
+| PyTorch                                                    |                                                                            https://pytorch.org                                                                             |
+| Keras                                                      |                                                                             https://keras.io/                                                                              |
+| ML .NET                                                    |                                                       https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet                                                       |
+| Azure Machine Learning - deploy trained models to IoT Edge |                                              https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning                                              |
+| Microsoft's approach to AI                                 |                                                           https://www.microsoft.com/en-us/ai/our-approach-to-ai                                                            |
 
 # MLOps whiteboard design session trainer guide
 

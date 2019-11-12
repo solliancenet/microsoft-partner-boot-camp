@@ -9,7 +9,7 @@ Security baseline on Azure
 </div>
 
 <div class="MCWHeader3">
-Novemeber 2019
+November 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -27,16 +27,16 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- TOC -->
 
 - [Security baseline on Azure whiteboard design session student guide](#security-baseline-on-azure-whiteboard-design-session-student-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-        - [Customer situation](#customer-situation)
-        - [Customer needs](#customer-needs)
-        - [Customer objections](#customer-objections)
-        - [Infographic for common scenarios](#infographic-for-common-scenarios)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
-    - [Wrap-up](#wrap-up)
-    - [Additional References](#additional-references)
+  - [Abstract and learning objectives](#abstract-and-learning-objectives)
+  - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+    - [Customer situation](#customer-situation)
+    - [Customer needs](#customer-needs)
+    - [Customer objections](#customer-objections)
+    - [Infographic for common scenarios](#infographic-for-common-scenarios)
+  - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+  - [Step 3: Present the solution](#step-3-present-the-solution)
+  - [Wrap-up](#wrap-up)
+  - [Additional References](#additional-references)
 
 <!-- /TOC -->
 
@@ -292,38 +292,38 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Additional References
 
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-| Azure Virtual Machines | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/>   |
-| Azure Virtual Networks | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>   |
-| Azure DDoS | <https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview>   |
-| Network Security Groups | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>  |
-| Azure VPN Gateway   |  <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal>  |
-| Azure Firewall   |  <https://docs.microsoft.com/en-us/azure/firewall>  |
-| Azure Front Door   |  <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-overview>  |
-| Azure Application Gateway   |  <https://docs.microsoft.com/en-us/azure/application-gateway>  |
-| Azure Web Apps   | <https://docs.microsoft.com/en-us/azure/app-service/>   |
-| Azure SQL   | <https://docs.microsoft.com/en-us/azure/sql-database/>     |
-| Azure SQL documentation, TDE, data masking and encryption at rest   |  <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault>   |
-| Express Route   | <https://docs.microsoft.com/en-us/azure/expressroute/expressroute-introduction>  |
-| Azure Storage Encryption  | <https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption>  |
-| SQL Server (IaaS)   | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview>  |
-| Azure Identity Access Management (IAM)  | <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-configure>  |
-| Azure Monitor and Log Analytics   | <https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview>   |
-| Azure Sentinel   | <https://azure.microsoft.com/en-us/services/azure-sentinel/>   |
-| Azure Policy   | <https://azure.microsoft.com/en-us/services/azure-policy/>   |
-| Azure Lockbox   | <https://azure.microsoft.com/en-us/blog/approve-audit-support-access-requests-to-vms-using-customer-lockbox-for-azure/>   |
-| Azure Key Vault   |  <https://docs.microsoft.com/en-us/azure/key-vault/>  |
-| Microsoft Azure Active Directory Connect  | <https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-whatis>  |
-| Lift and Shift (IaaS)  |  <https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas> |
-| Microsoft Intune  | <https://docs.microsoft.com/en-us/intune>   |
-| Conditional Access  | <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal>    |
-| Azure, Office 365, Azure SQL and Cloud App references   | <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-no-modern-authentication>  |
-| SQL Database Conditional Access  | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-conditional-access>  |
-| SQL Database Service Endpoints  | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview>  |
-| Azure AD Conditional Access Technical Reference  | <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-technical-reference>   |
-| Advanced Threat Analytics  | <https://docs.microsoft.com/en-us/advanced-threat-analytics>   |
-| Microsoft Cloud App Security  | <https://docs.microsoft.com/en-us/cloud-app-security>   |
-| Compliance Commitments   |  <http://azure.microsoft.com/en-us/support/trust-center/services/>  |
-| Azure Trust Center  | <http://azure.microsoft.com/en-us/support/trust-center/>     |
+|                                                                   |                                                                                                                                |
+| ----------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: |
+| **Description**                                                   |                                                           **Links**                                                            |
+| Azure Virtual Machines                                            |                               <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/>                               |
+| Azure Virtual Networks                                            |                       <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>                       |
+| Azure DDoS                                                        |                       <https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview>                        |
+| Network Security Groups                                           |                         <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>                          |
+| Azure VPN Gateway                                                 |          <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal>           |
+| Azure Firewall                                                    |                                       <https://docs.microsoft.com/en-us/azure/firewall>                                        |
+| Azure Front Door                                                  |                             <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-overview>                             |
+| Azure Application Gateway                                         |                                  <https://docs.microsoft.com/en-us/azure/application-gateway>                                  |
+| Azure Web Apps                                                    |                                     <https://docs.microsoft.com/en-us/azure/app-service/>                                      |
+| Azure SQL                                                         |                                     <https://docs.microsoft.com/en-us/azure/sql-database/>                                     |
+| Azure SQL documentation, TDE, data masking and encryption at rest |              <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault>               |
+| Express Route                                                     |                        <https://docs.microsoft.com/en-us/azure/expressroute/expressroute-introduction>                         |
+| Azure Storage Encryption                                          |                       <https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption>                       |
+| SQL Server (IaaS)                                                 |    <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview>     |
+| Azure Identity Access Management (IAM)                            |                 <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-configure>                  |
+| Azure Monitor and Log Analytics                                   |                    <https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview>                     |
+| Azure Sentinel                                                    |                                  <https://azure.microsoft.com/en-us/services/azure-sentinel/>                                  |
+| Azure Policy                                                      |                                   <https://azure.microsoft.com/en-us/services/azure-policy/>                                   |
+| Azure Lockbox                                                     |    <https://azure.microsoft.com/en-us/blog/approve-audit-support-access-requests-to-vms-using-customer-lockbox-for-azure/>     |
+| Azure Key Vault                                                   |                                      <https://docs.microsoft.com/en-us/azure/key-vault/>                                       |
+| Microsoft Azure Active Directory Connect                          |            <https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-whatis>            |
+| Lift and Shift (IaaS)                                             | <https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas> |
+| Microsoft Intune                                                  |                                           <https://docs.microsoft.com/en-us/intune>                                            |
+| Conditional Access                                                |           <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal>           |
+| Azure, Office 365, Azure SQL and Cloud App references             |     <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-no-modern-authentication>     |
+| SQL Database Conditional Access                                   |                     <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-conditional-access>                      |
+| SQL Database Service Endpoints                                    |             <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview>             |
+| Azure AD Conditional Access Technical Reference                   |       <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-technical-reference>        |
+| Advanced Threat Analytics                                         |                                  <https://docs.microsoft.com/en-us/advanced-threat-analytics>                                  |
+| Microsoft Cloud App Security                                      |                                     <https://docs.microsoft.com/en-us/cloud-app-security>                                      |
+| Compliance Commitments                                            |                               <http://azure.microsoft.com/en-us/support/trust-center/services/>                                |
+| Azure Trust Center                                                |                                    <http://azure.microsoft.com/en-us/support/trust-center/>                                    |

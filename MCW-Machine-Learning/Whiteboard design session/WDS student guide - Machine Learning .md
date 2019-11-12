@@ -9,7 +9,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-September 2019
+November 2019
 </div>
 
 
@@ -93,13 +93,13 @@ In the second scenario, Trey Research would like to predict the likelihood of ba
 
 With regards to the battery telemetry, the subject matter experts at Trey have explained that batteries are manufactured to a specification indicating how many cycles (that is complete charge, discharge cycles) they can handle before their performance starts to degrade (which indicates a good point to suggest replacing the battery). Effectively, the daily cycles consumed is like a clock counting up towards battery's rated lifecycle, approximating the battery's lifespan. In their solution, they can collect telemetry from a car on a daily basis, collecting data about the duration (in minutes) of the trips the car took during the previous day. For their prototype, they have provided historical data for batteries that have reached their replacement point. For a single battery, the telemetry looks similar to the following:
 
-| Date	| Battery_ID	| Battery_Age_Days	| Number_Of_Trips	| Daily_Trip_Duration	| Daily_Cycles_Used	| Lifetime_Cycles_Used	| Battery_Rated_Cycles |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1/1/2013	| 0	| 0	| 5	| 67.84560758	| 0.166920318	| 0.166920318	| 200
-| 1/2/2013	| 0	| 1	| 5	| 53.45079793	| 0.131504817	| 0.298425135	| 200
-| 1/3/2013	| 0	| 2	| 5	| 58.84143294	| 0.144767378	| 0.443192512	| 200
-| 1/4/2013	| 0	| 3	| 5	| 60.63840306	| 0.149188457	| 0.59238097	| 200
-| 1/5/2013	| 0	| 4	| 5	| 62.64690998	| 0.15412998	| 0.74651095	| 200
+| Date     | Battery_ID | Battery_Age_Days | Number_Of_Trips | Daily_Trip_Duration | Daily_Cycles_Used | Lifetime_Cycles_Used | Battery_Rated_Cycles |
+| -------- | ---------- | ---------------- | --------------- | ------------------- | ----------------- | -------------------- | -------------------- |
+| 1/1/2013 | 0          | 0                | 5               | 67.84560758         | 0.166920318       | 0.166920318          | 200                  |
+| 1/2/2013 | 0          | 1                | 5               | 53.45079793         | 0.131504817       | 0.298425135          | 200                  |
+| 1/3/2013 | 0          | 2                | 5               | 58.84143294         | 0.144767378       | 0.443192512          | 200                  |
+| 1/4/2013 | 0          | 3                | 5               | 60.63840306         | 0.149188457       | 0.59238097           | 200                  |
+| 1/5/2013 | 0          | 4                | 5               | 62.64690998         | 0.15412998        | 0.74651095           | 200                  |
 
 Upon detection of an out of compliance component or a battery at risk of failure, they would like to be able to send an alert directly to the customer inviting them to schedule a service appointment to replace the part. 
 
@@ -274,13 +274,13 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Additional references
 
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-|Azure Databricks documentation |https://docs.microsoft.com/en-us/azure/azure-databricks/|
-|Azure Machine Learning service documentation|https://docs.microsoft.com/en-us/azure/machine-learning/service/|
-|Microsoft Learn - Data Scientist|https://docs.microsoft.com/en-us/learn/browse/?roles=data-scientist|
-|PyTorch|https://pytorch.org|
-|Keras|https://keras.io/|
-| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
-| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|
+|                                                        |                                                                                             |
+| ------------------------------------------------------ | :-----------------------------------------------------------------------------------------: |
+| **Description**                                        |                                          **Links**                                          |
+| Azure Databricks documentation                         |                  https://docs.microsoft.com/en-us/azure/azure-databricks/                   |
+| Azure Machine Learning service documentation           |              https://docs.microsoft.com/en-us/azure/machine-learning/service/               |
+| Microsoft Learn - Data Scientist                       |             https://docs.microsoft.com/en-us/learn/browse/?roles=data-scientist             |
+| PyTorch                                                |                                     https://pytorch.org                                     |
+| Keras                                                  |                                      https://keras.io/                                      |
+| Enterprise security for Azure Machine Learning service | https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security |
+| Microsoft's approach to AI                             |                    https://www.microsoft.com/en-us/ai/our-approach-to-ai                    |

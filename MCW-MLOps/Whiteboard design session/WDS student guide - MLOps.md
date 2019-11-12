@@ -9,7 +9,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-June 2019
+November 2019
 </div>
 
 
@@ -213,18 +213,18 @@ Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-|Azure Machine Learning documentation|https://docs.microsoft.com/en-us/azure/machine-learning/service/|
-|Azure Machine Learning - How to enable App Insights| https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-app-insights |
-|Azure Machine Learning - How to enable data collection |https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-data-collection|
-|Machine Learning Pipelines|https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-your-first-pipeline?view=azure-devops|
-|Azure Pipelines - Train and deploy machine learning models|https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-machine-learning?context=azure%2Fmachine-learning%2Fservice%2Fcontext%2Fml-context&view=azure-devops|
-|Azure DevOps Release Approvals and Gates| https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/index?view=azure-devops |
-| Enterprise security for Azure Machine Learning service|https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security|
-|PyTorch|https://pytorch.org|
-|Keras|https://keras.io/|
-|ML .NET|https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet|
-|Azure Machine Learning - deploy trained models to IoT Edge | https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning|
-| Microsoft's approach to AI|https://www.microsoft.com/en-us/ai/our-approach-to-ai|
+|                                                            |                                                                                                                                                                            |
+| ---------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Description**                                            |                                                                                 **Links**                                                                                  |
+| Azure Machine Learning documentation                       |                                                      https://docs.microsoft.com/en-us/azure/machine-learning/service/                                                      |
+| Azure Machine Learning - How to enable App Insights        |                                         https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-app-insights                                         |
+| Azure Machine Learning - How to enable data collection     |                                       https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-data-collection                                        |
+| Machine Learning Pipelines                                 |                            https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-your-first-pipeline?view=azure-devops                             |
+| Azure Pipelines - Train and deploy machine learning models | https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-machine-learning?context=azure%2Fmachine-learning%2Fservice%2Fcontext%2Fml-context&view=azure-devops |
+| Azure DevOps Release Approvals and Gates                   |                                     https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/index?view=azure-devops                                      |
+| Enterprise security for Azure Machine Learning service     |                                        https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security                                         |
+| PyTorch                                                    |                                                                            https://pytorch.org                                                                             |
+| Keras                                                      |                                                                             https://keras.io/                                                                              |
+| ML .NET                                                    |                                                       https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet                                                       |
+| Azure Machine Learning - deploy trained models to IoT Edge |                                              https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning                                              |
+| Microsoft's approach to AI                                 |                                                           https://www.microsoft.com/en-us/ai/our-approach-to-ai                                                            |
